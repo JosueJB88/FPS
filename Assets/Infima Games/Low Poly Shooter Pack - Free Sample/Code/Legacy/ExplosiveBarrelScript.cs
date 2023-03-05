@@ -1,10 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+
+
 
 public class ExplosiveBarrelScript : MonoBehaviour {
 
 	float randomTime;
 	bool routineStarted = false;
+
+	public GameObject boton;
+
+	public int contador = 0;
 
 	//Used to check if the barrel 
 	//has been hit and should explode 
@@ -92,9 +99,29 @@ public class ExplosiveBarrelScript : MonoBehaviour {
 			//Instantiate explosion prefab at hit position
 			Instantiate (explosionPrefab, checkGround.point, 
 				Quaternion.FromToRotation (Vector3.forward, checkGround.normal)); 
+
+				
 		}
 
 		//Destroy the current barrel object
-		Destroy (gameObject);
+		Destroy (gameObject,contador = contador + 1);
+
+		// aqui pon el contador despues de la destruccion del barril y luego los vas actualizando sumandole 1 o como quierras 
+       //OK BRO ENTINDO
+
+	   
+
+      
+     /*if(contador >= 1){
+
+          boton.gameObject.SetActive (true);
+	 }
+*/
+	    
 	}
+
+
+ 
+
+
 }
