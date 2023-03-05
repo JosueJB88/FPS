@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
-
+using TMPro;
 
 public class ExplosiveBarrelScript : MonoBehaviour {
+
+	public TextMeshProUGUI number;
 
 	float randomTime;
 	bool routineStarted = false;
@@ -120,7 +121,11 @@ public class ExplosiveBarrelScript : MonoBehaviour {
 	    
 	}
 
-
+	private void OnDestroy() {
+		int num = int.Parse(number.text);
+		num++;
+		number.text = num.ToString();
+	}
  
 
 
