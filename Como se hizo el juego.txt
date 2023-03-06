@@ -1,0 +1,6 @@
+Como se hizo el juego
+
+
+Para realizar esta tarea utilice una serie de assets gratuitos de unity en los cuales están, Modular First Person Controller y Low Poly Shooter Pack - Free Sampl. Estos ayudaron para la modalidad de movimiento, armas, animaciones, sonidos y efectos visuales. También programa funciones como el menú, la música, y transiciones.
+
+La idea del juego es explotar los barriles disperso en el mapa también se puede interactuar con otros objetos
