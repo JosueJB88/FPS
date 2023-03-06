@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ExplosiveBarrelScript : MonoBehaviour {
 
@@ -125,7 +126,29 @@ public class ExplosiveBarrelScript : MonoBehaviour {
 		int num = int.Parse(number.text);
 		num++;
 		number.text = num.ToString();
+
+
+		if(num >= 20){
+
+          //Invoke("LoadNextScene", 3f);
+
+
+		  
+		  StartCoroutine(Fade());
+          number.text = "Todos Los Barriles se  Explotaron Ganaste".ToString();
+		   
+	 }
 	}
+          IEnumerator Fade(){
+			yield return new WaitForSeconds(5f);
+             SceneManager.LoadScene("Menu");
+			//Invoke("LoadNextScene");
+		  }
+
+/*	void LoadNextScene()
+{
+    SceneManager.LoadScene("Menu");
+}*/
  
 
 
